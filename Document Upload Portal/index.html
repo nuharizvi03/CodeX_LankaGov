@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document Upload Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="upload-container">
+    <h2>Document Upload Portal</h2>
+    <p class="sub">Securely upload the required documents for your government service application. Ensure all documents are clear and legible.</p>
+
+    <!-- Application Details -->
+    <section class="section">
+      <div class="app-grid">
+        <div class="detail">
+          <span class="label">Application Type</span>
+          <span class="value">National Identity Card</span>
+        </div>
+        <div class="detail">
+          <span class="label">Applicant Name</span>
+          <span class="value">Priya Silva</span>
+        </div>
+        <div class="detail span-2">
+          <span class="label">Application ID</span>
+          <span class="value">NIC-2023-0012345</span>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Required Documents -->
+    <section class="section">
+      <h3>Required Documents</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox" class="doc-check" value="nic"> National Identity Card (NIC): Front and Back</label>
+        <label><input type="checkbox" class="doc-check" value="birth"> Birth Certificate</label>
+        <label><input type="checkbox" class="doc-check" value="photo"> Recent Passport-Sized Photograph</label>
+      </div>
+    </section>
+
+    <!-- Progress -->
+    <section class="section">
+      <div class="progress-header">
+        <span class="label">Upload Progress</span>
+        <span id="progressText" class="muted">0/3</span>
+      </div>
+      <div class="progress-row">
+        <progress id="progressBar" value="0" max="3" aria-label="Upload Progress"></progress>
+      </div>
+    </section>
+
+    <!-- File Upload Fields -->
+    <section class="section fields">
+      <div class="field">
+        <label for="nicFile">Upload NIC (Front and Back)</label>
+        <input type="file" id="nicFile" class="doc-file" placeholder="Choose file"/>
+      </div>
+
+      <div class="field">
+        <label for="birthFile">Upload Birth Certificate</label>
+        <input type="file" id="birthFile" class="doc-file" placeholder="Choose file"/>
+      </div>
+
+      <div class="field">
+        <label for="photoFile">Upload Passport Photo</label>
+        <input type="file" id="photoFile" class="doc-file" placeholder="Choose file" />
+      </div>
+    </section>
+
+    <!-- Notice -->
+    <p class="note">
+      By uploading these documents, you confirm that the information provided is accurate and complete. Any discrepancies may lead to application rejection.
+    </p>
+
+    <div class="actions">
+      <button id="submitBtn">Submit Documents</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

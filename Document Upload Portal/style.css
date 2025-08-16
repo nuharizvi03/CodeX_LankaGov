@@ -1,0 +1,159 @@
+:root{
+  --container-w: 980px;      /* wider page like your design */
+  --space-1: 8px;
+  --space-2: 14px;
+  --space-3: 22px;           /* bigger vertical rhythm */
+  --space-4: 32px;
+  --radius: 12px;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #f5f5f5;
+  --brand: #0d6efd;
+  --bar: #e6e6e6;
+  --bar-fill: #222;          /* dark like the screenshot */
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.upload-container{
+  max-width: var(--container-w);
+  width: min(96vw, var(--container-w));
+  margin: 56px auto;
+  background:#fff;
+  padding: 44px;                 /* more inner spacing */
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+h2{
+  margin: 0 0 var(--space-1);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sub{
+  margin: 0 0 var(--space-4);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.section{ margin-top: var(--space-4); }
+
+.app-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 60px;               /* generous spacing between columns/rows */
+}
+
+.detail .label{
+  display:block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.detail .value{ font-weight: 600; }
+.span-2{ grid-column: 1 / -1; }
+
+hr{
+  margin: var(--space-4) 0;
+  border:0;
+  border-top:1px solid var(--border);
+}
+
+.checkbox-group label{
+  display:block;
+  padding: 10px 0;              /* more breathing space per item */
+  font-size: 15px;
+}
+
+.progress-header{
+  display:flex;
+  align-items:center;
+  justify-content: space-between; /* text count on the right like the mock */
+  margin-bottom: 10px;
+}
+
+.label{ font-weight: 600; }
+.muted{ color: var(--muted); }
+
+.progress-row{ display:flex; align-items:center; gap: 12px; }
+
+/* Nicer progress bar */
+progress{
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  background: var(--bar);
+}
+progress::-webkit-progress-bar{
+  background: var(--bar);
+  border-radius: 999px;
+}
+progress::-webkit-progress-value{
+  background: var(--bar-fill);
+  border-radius: 999px;
+}
+progress::-moz-progress-bar{
+  background: var(--bar-fill);
+  border-radius: 999px;
+}
+
+.fields{ margin-top: var(--space-3); }
+
+.field{ margin-top: var(--space-3); }
+
+.field label{
+  display:block;
+  font-weight: 600;
+  margin-bottom: 10px;          /* extra space above the control */
+}
+
+input[type="file"]{
+  width: 100%;
+  padding: 14px;                /* taller control */
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fafafa;
+  font-size: 15px;
+}
+
+.note{
+  margin-top: var(--space-4);
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.actions{
+  margin-top: var(--space-3);
+  display:flex;
+  justify-content: flex-end;    /* button on the right like the design */
+}
+
+button{
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover{ opacity: .92; }
+
+/* Responsive tweak */
+@media (max-width: 720px){
+  .app-grid{ grid-template-columns: 1fr; gap: 14px; }
+  .span-2{ grid-column: auto; }
+}

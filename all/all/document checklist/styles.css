@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.breadcrumb span {
+    color: #000000;
+    cursor: pointer;
+}
+
+.breadcrumb span:hover {
+    text-decoration: underline;
+}
+
+.checklist-container h1 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.checklist-section {
+    margin-bottom: 30px;
+}
+
+.checklist-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.document-list {
+    margin-left: 20px;
+}
+
+.document-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.document-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Button Container - Right Aligned */
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* Left-aligns button */
+  margin-top: 25px;
+  width: 100%;
+}
+
+/* Button styles */
+.confirm-btn {
+  background-color: #0D80F2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Button states */
+.confirm-btn:hover {
+  background-color: #0B6BCB;
+}
+
+.confirm-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+  .button-container {
+    justify-content: center;
+  }
+  
+  .confirm-btn {
+    width: 100%;
+  }
+}

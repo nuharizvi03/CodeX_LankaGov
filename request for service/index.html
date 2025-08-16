@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request for Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Request for Service</h2>
+    <p>Please fill out the form below to submit your request.Ensure all fields are acccurately completed to avoid delays.</p>
+
+    <!-- Progress bar -->
+    <progress id="progressBar" value="25" max="100"></progress>
+    <p id="progressText">25%</p>
+
+    <!-- Form -->
+    <form id="serviceForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+      <label for="nationalId">National ID Number</label>
+      <input type="text" id="nationalId" placeholder="Enter your National ID number" required>
+
+      <label for="serviceType">Service Type</label>
+      <select id="serviceType" required>
+        <option value="">--Select Option--</option>
+        <option value="passport">Passport</option>
+        <option value="license">Driving License</option>
+        <option value="id">National ID</option>
+      </select>
+
+      <label for="description">Description of Request</label>
+      <textarea id="description" placeholder="" required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

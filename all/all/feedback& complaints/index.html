@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Complaints</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback & Complaints</h1>
+        
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name"><strong>Your Name</strong></label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><strong>Email Address</strong></label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="service"><strong>Select Service</strong></label>
+                <select id="service" required>
+                    <option value="" disabled selected></option>
+                    <option value="passport-application">Passport Application</option>
+  <option value="national-id">National ID Card</option>
+  <option value="driving-license">Driving License Renewal</option>
+  <option value="birth-certificate">Birth Certificate</option>
+  <option value="marriage-registration">Marriage Registration</option>
+  <option value="visa-application">Visa Application</option>
+  <option value="vehicle-registration">Vehicle Registration</option>
+  <option value="land-registration">Land Registration</option>
+  <option value="business-registration">Business Registration</option>
+  <option value="death-registration">Death Registration</option>
+  <option value="pension-application">Pension Application</option>
+  <option value="birth-registration">Birth Registration</option>
+  <option value="passport-renewal">Passport Renewal</option>
+  <option value="national-id-replacement">National ID Replacement</option>
+  <option value="driving-license-application">Driving License Application</option>
+  <option value="birth-certificate-copy">Birth Certificate Copy</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="feedback"><strong>Your Feedback/Complaint</strong></label>
+                <textarea id="feedback" rows="5" placeholder="Please describe your feedback or complaint in details" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        
+        <div id="thankYouMessage" class="hidden">
+            <h2>Thank You!</h2>
+            <p>We've received your feedback and will get back to you soon.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

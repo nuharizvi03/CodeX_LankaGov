@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  width: 700px;                /* 🔹 Increased form width */
+  margin: 50px auto;
+  padding: 40px;               /* 🔹 More inner spacing */
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;            /* 🔹 More space above each label */
+  margin-bottom: 8px;          /* 🔹 Extra gap before input */
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;               /* 🔹 Bigger input height */
+  margin-bottom: 18px;         /* 🔹 More gap between fields */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;               /* 🔹 Bigger textarea */
+}
+
+button {
+  margin-top: 20px;
+  padding: 14px 28px;          /* 🔹 Bigger button */
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+progress {
+  width: 100%;
+  margin: 18px 0;              /* 🔹 More space around progress bar */
+}

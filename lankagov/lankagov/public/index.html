@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LankaGov</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">
+        <i fas-fa="cube"></i>LankaGov
+    </div>
+    <div class="header-links">
+        <a href="#">Language</a>
+        <a href="#">Accessibility</a>
+        <button class="login-btn">Login/Signup</button>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <img src="images/bg.jpg" alt="Government Building" class="hero-img">
+    <div class="hero-text">
+        <h1 id="h1">Your Gateway to Government Services</h1>
+        <p id="p">Access a wide range of government services and information with ease and efficiency.</p>
+        <button class="explore-btn">Explore Services</button>
+    </div>
+</section>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for services">
+</div>
+
+<!-- Quick Action / Appointment Status -->
+<div class="quick-tabs">
+    <button onclick="location.href='quick-action.html'" class="quick-action-btn">Quick Action</button>
+    <button onclick="location.href='appointment-status.html'">Appointment Status</button>
+</div>
+
+<!-- Main Service Categories -->
+<section class="services">
+    <h2 id="h2">Main Service Categories</h2>
+    <div class="service-grid">
+        <a href="national-identity.html" class="service-item">
+        <img src="images/nic.jpg" alt="National Identity">
+        <h3>National Identity</h3>
+        <p>Apply or renew your National Identity Card</p>
+    </a>
+
+    <a href="driving-license.html" class="service-item">
+        <img src="images/license.jpg" alt="Driving License">
+        <h3>Driving License</h3>
+        <p>Apply or renew your Driving License</p>
+    </a>
+
+    <a href="passport.html" class="service-item">
+        <img src="images/passport.jpg" alt="Passport">
+        <h3>Passport</h3>
+        <p>Apply or renew your Passport</p>
+    </a>
+
+    <a href="vehicle-registration.html" class="service-item">
+        <img src="images/VehicleRegi.jpg" alt="Vehicle Registration">
+        <h3>Vehicle Registration</h3>
+        <p>Register your vehicle</p>
+    </a>
+
+    <a href="education.html" class="service-item">
+        <img src="images/education.jpg" alt="Education">
+        <h3>Education</h3>
+        <p>Access educational services</p>
+    </a>
+
+    <a href="healthcare.html" class="service-item">
+        <img src="images/healthcare.jpg" alt="Healthcare">
+        <h3>Healthcare</h3>
+        <p>Access healthcare services</p>
+    </a>
+
+    <a href="housing.html" class="service-item">
+        <img src="images/housing.jpg" alt="Housing">
+        <h3>Housing</h3>
+        <p>Access housing services</p>
+    </a>
+
+    <a href="finance.html" class="service-item">
+        <img src="images/finance.jpg" alt="Finance">
+        <h3>Finance</h3>
+        <p>Access financial services</p>
+    </a>
+    </div>
+</section>
+
+<!-- Quick Access -->
+<section class="quick-access">
+    <h2>Quick Access</h2>
+    <div class="quick-grid">
+        <a href="national-identity.html" class="quick-card">
+            <img src="images/nic.jpg" alt="National Identity">
+            <h3>National Identity</h3>
+        </a>
+        <a href="driving-license.html" class="quick-card">
+            <img src="images/license.jpg" alt="Driving License">
+            <h3>Driving License</h3>
+        </a>
+        <a href="passport.html" class="quick-card">
+            <img src="images/passport.jpg" alt="Passport">
+            <h3>Passport</h3>
+        </a>
+        <a href="vehicle-registration.html" class="quick-card">
+            <img src="images/VehicleRegi.jpg" alt="Vehicle Registration">
+            <h3>Vehicle Registration</h3>
+        </a>
+    </div>
+</section>
+
+<!-- Appointment Status -->
+<section class="appointment-status">
+    <h2>Appointment Status</h2>
+    <input type="text" id="appointmentRef" placeholder="Enter your appointment reference number"> <br/> <br/>
+    <button onclick="checkAppointment()" class="btn">Check Status</button>
+    <p id="statusResult"></p>
+</section>
+
+<!-- Location Selector -->
+<section class="location">
+    <h2>Location Selector</h2>
+    <select id="location">
+        <option value="">Select your location</option>
+        <option value="Colombo">Colombo</option>
+        <option value="Kandy">Kandy</option>
+        <option value="Galle">Galle</option>
+    </select>
+</section>
+
+<!-- News -->
+<section class="news">
+    <div>
+        <h2>Latest Government Announcements</h2>
+        <p>Stay informed about the latest policy changes and updates from the government.</p>
+        <img src="/images/news.jpg" alt="Government News">
+    </div>
+    
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <h2>Testimonials</h2>
+    <div id="testimonialList"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <a href="#">Terms of Service</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Accessibility</a>
+    <p>© 2024 LankaGov. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

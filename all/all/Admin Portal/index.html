@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Admin Portal</h1>
+            
+            <div class="menu-section">
+                <h2>Dashboard</h2>
+                <div class="menu-item">
+                    <input type="checkbox" id="dashboard">
+                    <label for="dashboard">Dashboard</label>
+                </div>
+                <div class="menu-item">Services</div>
+                <div class="menu-item">Appointments</div>
+                <div class="menu-item">Users</div>
+                <div class="menu-item">Reports</div>
+                <div class="menu-item">Settings</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h2>Total Services</h2>
+                    <p>125</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Total Appointments</h2>
+                    <p>342</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Active Users</h2>
+                    <p>210</p>
+                </div>
+            </div>
+
+            <div class="activity-section">
+                <h2>Recent Activity</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reina Sira</td>
+                            <td>National ID Application</td>
+                            <td>2024-07-20</td>
+                            <td><span class="status status-scheduled">scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ping Firmeide</td>
+                            <td>Driving License Renewal</td>
+                            <td>2024-07-22</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Chennan Perere</td>
+                            <td>Passport Application</td>
+                            <td>2024-07-25</td>
+                            <td><span class="status status-scheduled">scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td>Nenel Rajapaksha</td>
+                            <td>Vehicle Registration</td>
+                            <td>2024-07-28</td>
+                            <td><span class="status status-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Azur Kumar</td>
+                            <td>Birth Certificate Request</td>
+                            <td>2024-07-30</td>
+                            <td><span class="status status-scheduled">scheduled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="footer">
+                <p>Logout</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

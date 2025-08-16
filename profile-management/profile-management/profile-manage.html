@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+    header nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+    p.subtext {
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    label {
+      display: block;
+      margin: 0.8rem 0 0.3rem;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-secondary {
+      background-color: #f2f2f2;
+      margin-top: 0.5rem;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+      margin-top: 1.5rem;
+      display: block;
+      width: 100%;
+    }
+
+    /* Error messages */
+    .error {
+      color: red;
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+    }
+
+    /* Toggle Switch Style */
+    .toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.2rem;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 46px;
+      height: 24px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+    .toggle-switch input:checked + .slider {
+      background-color: #007bff;
+    }
+    .toggle-switch input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <i class="fa fa-cube"></i>
+      <strong>LankaGov</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Support</a>
+      <img src="profile.jpg" alt="Profile" style="width: 35px; height: 35px; border-radius: 50%;">
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Profile Management</h1>
+    <p class="subtext">Manage your personal information and preferences for government services.</p>
+
+    <form id="profileForm" novalidate>
+      <h2>Personal Information</h2>
+      <label>Full Name</label>
+      <input type="text" name="fullName">
+      <div class="error" id="errorFullName"></div>
+
+      <label>National ID Number</label>
+      <input type="text" name="nid">
+      <div class="error" id="errorNID"></div>
+
+      <label>Date of Birth</label>
+      <input type="date" name="dob">
+      <div class="error" id="errorDOB"></div>
+
+      <label>Address</label>
+      <input type="text" name="address">
+      <div class="error" id="errorAddress"></div>
+
+      <label>Phone Number</label>
+      <input type="text" name="phone">
+      <div class="error" id="errorPhone"></div>
+
+      <label>Email</label>
+      <input type="email" name="email">
+      <div class="error" id="errorEmail"></div>
+
+      <h2>Security Settings</h2>
+      <label>Password</label>
+      <input type="password" name="password">
+      <div class="error" id="errorPassword"></div>
+      <button type="button" class="btn-secondary">Change Password</button>
+
+      <h2>Preferences</h2>
+      <div class="toggle">
+        <div>
+          <strong>Email Notifications</strong><br>
+          <small>Receive notifications about service updates, reminders, and important announcements.</small>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" name="emailNotifications">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle">
+        <div>
+          <strong>SMS Notifications</strong><br>
+          <small>Receive notifications via SMS for urgent updates and reminders.</small>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" name="smsNotifications">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn-primary">Update Profile</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("profileForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let isValid = true;
+
+      // Clear previous errors
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+      const fullName = document.querySelector("[name='fullName']").value.trim();
+      if (fullName.length < 3) {
+        document.getElementById("errorFullName").textContent = "Full name must be at least 3 characters.";
+        isValid = false;
+      }
+
+      const nid = document.querySelector("[name='nid']").value.trim();
+      if (nid.length < 10) {
+        document.getElementById("errorNID").textContent = "National ID must be at least 10 characters.";
+        isValid = false;
+      }
+
+      const dob = document.querySelector("[name='dob']").value;
+      if (!dob) {
+        document.getElementById("errorDOB").textContent = "Date of birth is required.";
+        isValid = false;
+      }
+
+      const address = document.querySelector("[name='address']").value.trim();
+      if (address.length < 5) {
+        document.getElementById("errorAddress").textContent = "Address must be at least 5 characters.";
+        isValid = false;
+      }
+
+      const phone = document.querySelector("[name='phone']").value.trim();
+      if (!/^[0-9]{10}$/.test(phone)) {
+        document.getElementById("errorPhone").textContent = "Enter a valid 10-digit phone number.";
+        isValid = false;
+      }
+
+      const email = document.querySelector("[name='email']").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("errorEmail").textContent = "Enter a valid email address.";
+        isValid = false;
+      }
+
+      const password = document.querySelector("[name='password']").value.trim();
+      if (password.length < 6) {
+        document.getElementById("errorPassword").textContent = "Password must be at least 6 characters.";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Profile updated successfully!");
+        // You can send form data to server here
+      }
+    });
+  </script>
+
+</body>
+</html>

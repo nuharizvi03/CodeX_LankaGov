@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Tracker</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .search-box {
+      margin-bottom: 40px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f5f5f5;
+      font-size: 15px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .details div {
+      margin-bottom: 15px;
+    }
+
+    .status {
+      font-size: 15px;
+    }
+
+    .status-bar {
+      height: 8px;
+      background: #ddd;
+      border-radius: 4px;
+      margin: 15px 0 12px;
+      position: relative;
+    }
+
+    .progress {
+      height: 100%;
+      width: 60%; /* Example progress */
+      background: #000;
+      border-radius: 4px;
+    }
+
+    .status small {
+      color: #777;
+    }
+
+    .updates ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-left: 2px solid #ddd;
+      margin-left: 25px;
+    }
+
+    .updates li {
+      margin-bottom: 30px;
+      padding-left: 30px;
+      position: relative;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .updates li i {
+      position: absolute;
+      left: -18px;
+      top: 2px;
+      background: #fff;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .updates span {
+      color: #555;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Application Tracker</h2>
+    <p class="subtitle">Track the progress of your submitted applications</p>
+
+    <div class="search-box">
+      <input type="text" placeholder="Enter your application ID">
+    </div>
+
+    <div class="section details">
+      <div>
+        <strong>Application ID</strong><br>
+        APP-2023-12345
+      </div>
+      <div>
+        <strong>Service Type</strong><br>
+        National Identity Card
+      </div>
+      <div>
+        <strong>Submission Date</strong><br>
+        October 26, 2023
+      </div>
+    </div>
+
+    <div class="section status">
+      <h3>Current Status</h3>
+      <p>Application Processing</p>
+      <div class="status-bar">
+        <div class="progress"></div>
+      </div>
+      <small>Estimated completion: November 15, 2023</small>
+    </div>
+
+    <div class="section updates">
+      <h3>Updates</h3>
+      <ul>
+        <li>
+          <i class="fa-solid fa-file-circle-check"></i>
+          Application Submitted
+          <span>October 26, 2023</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-spinner"></i>
+          Processing Started
+          <span>October 28, 2023</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-file-contract"></i>
+          Documents Verification
+          <span>November 2, 2023</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

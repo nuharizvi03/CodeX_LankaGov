@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <span>Home</span> / <span>Appointments</span> / <span>Document Checklist</span>
+        </div>
+
+        <div class="checklist-container">
+            <h1>Document Checklist</h1>
+            <p class="subtitle">Please ensure you have all the required documents before your appointment.</p>
+
+            <div class="checklist-section">
+                <h2>Required Documents</h2>
+                <div class="document-list">
+                    <div class="document-item">
+                        <input type="checkbox" id="nic">
+                        <label for="nic">National Identity Card (NIC)</label>
+                    </div>
+                    <div class="document-item">
+                        <input type="checkbox" id="birth-certificate">
+                        <label for="birth-certificate">Birth Certificate</label>
+                    </div>
+                    <div class="document-item">
+                        <input type="checkbox" id="photo">
+                        <label for="photo">Recent Passport-sized Photograph</label>
+                    </div>
+                    <div class="document-item">
+                        <input type="checkbox" id="address">
+                        <label for="address">Proof of Address (Utility Bill)</label>
+                    </div>
+                </div>
+            </div>
+
+            <button id="confirmBtn" class="confirm-btn">Confirm Documents Prepared</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

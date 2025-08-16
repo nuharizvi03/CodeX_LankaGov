@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<title>Select a Service - LankaGov</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  header nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  header img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 1rem 2rem;
+  }
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Popular Services */
+  .popular-services {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .service-card {
+    text-align: center;
+    width: 200px;
+  }
+  .service-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  .service-card p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+
+  /* Search */
+  .search-bar {
+    margin: 1rem 0;
+  }
+  .search-bar input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  /* All services list */
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+  }
+  .service-item:hover {
+    background: #f9f9f9;
+    cursor: pointer;
+  }
+  .service-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .service-details h4 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .service-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <i class="fa fa-cube"></i>
+    <strong>LankaGov</strong></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Appointments</a>
+    <a href="#">Contact</a>
+    <img src="profile.jpg" alt="Profile">
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <a href="#">Home</a> / <span>Book Appointment</span>
+</div>
+
+<div class="container">
+  <h1>Select a service</h1>
+
+  <h2>Popular Services</h2>
+  <div class="popular-services">
+    <div class="service-card">
+      <img src="passport.jpg" alt="Passport Application">
+      <i class="fas fa-credit-card icon"></i>
+      <p>Passport Application</p>
+    </div>
+    <div class="service-card">
+      <img src="nic.jpg" alt="National ID Card">
+      <p>National ID Card</p>
+    </div>
+    <div class="service-card">
+      <img src="license.jpg" alt="Driving License Renewal">
+      <p>Driving License Renewal</p>
+    </div>
+    <div class="service-card">
+      <img src="birth.jpg" alt="Birth Certificate">
+      <p>Birth Certificate</p>
+    </div>
+  </div>
+
+  <h2>All Services</h2>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for a service">
+  </div>
+
+  <ul class="service-list" id="serviceList">
+    <li class="service-item"><i class="fas fa-credit-card icon"></i><div class="service-details"><h4>Passport Application</h4><p>Apply for a new passport or renew an existing one.</p></div></li>
+    <li class="service-item"><i class="fas fa-credit-card icon"></i><div class="service-details"><h4>National ID Card</h4><p>Obtain or replace your National Identity Card.</p></div></li>
+    <li class="service-item"><i class="fas fa-car icon"></i><div class="service-details"><h4>Driving License Renewal</h4><p>Renew your driving license or apply for a new one.</p></div></li>
+    <li class="service-item"><i class="fas fa-file icon"></i><div class="service-details"><h4>Birth Certificate</h4><p>Request a copy of your birth certificate.</p></div></li>
+    <li class="service-item"><i class="fas fa-heart icon"></i><div class="service-details"><h4>Marriage Registration</h4><p>Register your marriage or obtain a marriage certificate.</p></div></li>
+    <li class="service-item"><i class="fas fa-plane icon"></i><div class="service-details"><h4>Visa Application</h4><p>Apply for a visa or extend your current visa.</p></div></li>
+    <li class="service-item"><i class="fas fa-car icon"></i><div class="service-details"><h4>Vehicle Registration</h4><p>Register your vehicle or transfer ownership.</p></div></li>
+    <li class="service-item"><i class="fas fa-home icon"></i><div class="service-details"><h4>Land Registration</h4><p>Obtain a copy of your land deed or register a new property.</p></div></li>
+    <li class="service-item"><i class="fas fa-briefcase icon"></i><div class="service-details"><h4>Business Registration</h4><p>Apply for a business registration or renew an existing one.</p></div></li>
+    <li class="service-item"><i class="fas fa-church icon"></i><div class="service-details"><h4>Death Registration</h4><p>Register a death or obtain a death certificate.</p></div></li>
+    <li class="service-item"><i class="fas fa-money icon"></i><div class="service-details"><h4>Pension Application</h4><p>Apply for a pension or inquire about your pension status.</p></div></li>
+    <li class="service-item"><i class="fas fa-baby icon"></i><div class="service-details"><h4>Birth Registration</h4><p>Register a birth or obtain a birth certificate.</p></div></li>
+    <li class="service-item"><i class="fas fa-credit-card icon"></i><div class="service-details"><h4>Passport Renewal</h4><p>Apply for a new passport or renew an existing one.</p></div></li>
+    <li class="service-item"><i class="fas fa-credit-card icon"></i><div class="service-details"><h4>National ID Replacement</h4><p>Obtain or replace your National Identity Card.</p></div></li>
+    <li class="service-item"><i class="fas fa-car icon"></i><div class="service-details"><h4>Driving License Application</h4><p>Renew your driving license or apply for a new one.</p></div></li>
+    <li class="service-item"><i class="fas fa-file icon"></i><div class="service-details"><h4>Birth Certificate Copy</h4><p>Request a copy of your birth certificate.</p></div></li>
+  </ul>
+</div>
+
+<script>
+  // Search filter
+  const searchInput = document.getElementById("searchInput");
+  const serviceList = document.getElementById("serviceList");
+  const services = serviceList.getElementsByClassName("service-item");
+
+  searchInput.addEventListener("keyup", function() {
+    let filter = searchInput.value.toLowerCase();
+    Array.from(services).forEach(function(service) {
+      let text = service.innerText.toLowerCase();
+      service.style.display = text.includes(filter) ? "" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
